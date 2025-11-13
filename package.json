@@ -1,5 +1,5 @@
 {
-  "name": "template-webpack-eslint-prettier",
+  "name": "odin-template",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cgrustas/template-webpack-eslint-prettier.git"
+    "url": "git+https://github.com/cgrustas/odin-template.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cgrustas/template-webpack-eslint-prettier/issues"
+    "url": "https://github.com/cgrustas/odin-template/issues"
   },
-  "homepage": "https://github.com/cgrustas/template-webpack-eslint-prettier#readme",
+  "homepage": "https://github.com/cgrustas/odin-template#readme",
   "description": "",
   "devDependencies": {
     "@babel/cli": "^7.28.3",
