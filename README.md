@@ -1,23 +1,74 @@
-# Template Repository - JavaScript, Webpack, ESLint, Prettier
+# Odin Template
 
-Created to build projects for [The Odin Project](https://www.theodinproject.com/).
+A modern JavaScript project template for [The Odin Project](https://www.theodinproject.com/) curriculum.
 
-## Setup
+## Features
 
-1. Update the project metadata in package.json to match your new project:
-   - Update the "name" and "description" fields in `package.json`
-   - Update project title in `src/template.html`
-2. Run npm install.
-3. Run 'npm start' to confirm everything is working.
+- **Webpack** - with separate dev/prod configurations
+- **Asset Management** - Image and font loading configured for Webpack
+- **ESLint** - with flat config
+- **Prettier** - with pre-commit hooks (Husky & lint-staged)
+- **Jest** - with Babel support
+- **CSS Reset**
 
-## Deployment
+## Getting Started
 
-1. Make a new branch to deploy from by running `git branch gh-pages`. You only need to do this the first time you deploy.
-2. Make sure you have all your work committed. You can use `git status` to see if there’s anything that needs committing.
-3. Run git checkout gh-pages && `git merge main --no-edit` to change branch and sync your changes from main so that you’re ready to deploy.
-4. Bundle your application into dist with your build command. Use `npm run build`.
-5. Run each of these commands in order:
-   - `git add dist -f && git commit -m "Deployment commit"`
-   - `npm run deploy`
-   - `git checkout main`
-6. Change the source branch for GitHub Pages to `gh-pages`.
+1. Click "Use this template" on GitHub or clone the repository
+2. Update project metadata:
+   - Change `name` and `description` in `package.json`
+   - Update `<title>` in `src/template.html`
+   - Update repository URL in `package.json`
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start development server:
+   ```bash
+   npm start
+   ```
+
+## Project Structure
+
+```
+├── src/
+│   ├── styles/
+│   │   ├── reset.css      # CSS reset for consistency
+│   │   └── styles.css     # Your styles here
+│   ├── index.js           # Application entry point
+│   └── template.html      # HTML template
+├── tests/                 # Jest test files
+├── dist/                  # Built files (git-ignored)
+├── webpack.common.js      # Shared webpack config
+├── webpack.dev.js         # Development config
+├── webpack.prod.js        # Production config
+└── eslint.config.mjs      # ESLint flat config
+```
+
+## Available Scripts
+
+- `npm start` - Start development server with live reload
+- `npm run build` - Build for production to `dist/` folder
+- `npm test` - Run Jest tests
+- `npm run deploy` - Build and deploy to GitHub Pages (requires gh-pages package)
+
+## GitHub Pages Deployment
+
+### First Deployment
+
+When you're ready to deploy your project:
+
+1. Push your repository to GitHub if you haven't already
+2. Run `npm run deploy` - this creates the gh-pages branch and deploys
+3. Go to Settings → Pages in your GitHub repo
+4. Set source to "Deploy from a branch" and select "gh-pages"
+5. Your site will be live at `https://[username].github.io/[repo-name]/`
+
+### Updating Your Site
+
+After initial setup, deploy updates anytime with:
+
+```bash
+npm run deploy
+```
+
+This automatically builds and deploys your project. The predeploy script runs `npm run build` before deploying.
