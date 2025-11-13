@@ -20,6 +20,7 @@ export default defineConfig([
     languageOptions: {
       globals: {
         ...globals.jest,
+        ...globals.node,
       },
     },
   },
